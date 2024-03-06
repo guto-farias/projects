@@ -1,4 +1,4 @@
-let passwordLength = 20
+let passwordLength = 16
 let finalPassword = ""
 
 function generatePassword(){
@@ -43,8 +43,49 @@ function catchRange(){ //pego valor do input range e chamo generatePassword a ca
     passwordLengthEl.addEventListener("input", function(){
         passwordLength = passwordLengthEl.value
         document.querySelector("#password-length-text").innerText = passwordLength
+        calculateQuality()
         generatePassword()
     })
+}
+
+function calculateQuality(){
+    const indicatorBarEl = document.querySelector("#security-indicator-bar")
+
+    const upperCaseEl = document.querySelector("#uppercase-check")
+    const numberEl = document.querySelector("#number-check")
+    const symbolEl = document.querySelector("#symbol-check")
+
+    const percent = Math.round(
+        (passwordLength / 40 * 100) * 0.25 + //tamanho da senha 25% da dificuldade
+        (upperCaseEl.checked ? 15 : 0) +    //maiúsculas 15% da dificuldade
+        (numberEl.checked ? 25 : 0) +       //números 25% da dificuldade
+        (symbolEl.checked ? 35 : 0)         //símbolos da senha 35% da dificuldade
+    )//round arredonda valores
+    indicatorBarEl.style.width = `${percent}%`
+
+    if (percent > 69) {
+        //strong
+        indicatorBarEl.classList.remove('media')
+        indicatorBarEl.classList.remove('weak')
+        indicatorBarEl.classList.add('strong')
+    } else if(percent >50) {
+        //media
+        indicatorBarEl.classList.remove('strong')
+        indicatorBarEl.classList.remove('weak')
+        indicatorBarEl.classList.add('media')
+    } else {
+        //weak
+        indicatorBarEl.classList.remove('strong')
+        indicatorBarEl.classList.remove('media')
+        indicatorBarEl.classList.add('weak')
+    }
+
+    if(percent >= 100){
+        indicatorBarEl.classList.add('completed')
+    } else {
+        indicatorBarEl.classList.remove('completed')
+    }
+    
 }
 
 function copy(){
