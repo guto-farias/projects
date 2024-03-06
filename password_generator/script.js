@@ -45,7 +45,30 @@ function catchRange(){ //pego valor do input range e chamo generatePassword a ca
         document.querySelector("#password-length-text").innerText = passwordLength
         calculateQuality()
         generatePassword()
+        calculateFontSize(passwordLength)
     })
+}
+
+function calculateFontSize(passwordLength){
+    const inputEl = document.getElementById("password")
+    
+    if (passwordLength > 30) {
+        inputEl.classList.remove('font-sm')
+        inputEl.classList.remove('font-xs')
+        inputEl.classList.add('font-xxs')
+    } else if(passwordLength > 24){
+        inputEl.classList.remove('font-xxs')
+        inputEl.classList.remove('font-sm')
+        inputEl.classList.add('font-xs')
+    } else if(passwordLength > 14){
+        inputEl.classList.remove('font-xxs')
+        inputEl.classList.remove('font-xs')
+        inputEl.classList.add('font-sm')
+    } else {
+        inputEl.classList.remove('font-xxs')
+        inputEl.classList.remove('font-xs')
+        inputEl.classList.remove('font-sm')
+    }
 }
 
 function calculateQuality(){
