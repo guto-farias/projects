@@ -1,0 +1,199 @@
+/* Reset básico e estilos globais */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #d5d3d3;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/* Estilização do container geral */
+.comments-container {
+    width: 100%; /* Faz o container usar 100% da largura disponível */
+    max-width: 800px; /* Limita a largura máxima para grandes telas */
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.comments-container h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px; /* Espaçamento abaixo do título da seção */
+}
+
+/* Estilização dos comentários individuais */
+.comment {
+    border-bottom: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 10px;
+    background-color: #fbfbfb;
+    border-radius: 5px;
+    box-shadow: 0 2px 3px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Flexibilidade nos botões e contadores de likes */
+.likes {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.likes button, .likes span {
+    margin: 0 5px;
+}
+
+.comment-content {
+    flex-grow: 1;
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.comment-header strong {
+    color: #333;
+}
+
+/* Botões de ação */
+.edit, .delete, .reply, .send {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.edit:hover, .delete:hover, .reply:hover, .send:hover {
+    background-color: #0a8630;
+}
+
+.delete {
+    background-color: #bf5c5c;
+}
+
+.delete:hover {
+    background-color: #800b0b;
+}
+
+/* Área de entrada para novos comentários */
+.comment-input textarea, .comment-input button {
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* Resposta ao comentário */
+.response-box {
+    padding: 10px;
+    border-left: 2px solid #4CAF50;
+}
+
+/* Media queries para adaptação em dispositivos menores */
+@media (max-width: 768px) {
+    .comment {
+        flex-direction: column;
+    }
+
+    .likes {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .comment-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .response-box {
+        border-left: none;
+        padding-left: 0;
+    }
+
+    .denunciar-btn {
+        width: 100%; /* Largura total em dispositivos móveis */
+        padding: 12px; /* Padding maior para facilidade de interação */
+    }
+}
+
+@media (max-width: 480px) {
+    .comments-container {
+        padding: 10px;
+    }
+
+    .comment {
+        padding: 10px;
+    }
+}
+
+/* Estilos para botões de curtir/descurtir e imagem responsiva */
+.likes button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+    margin: 2px;
+}
+
+.likes .dislike {
+    background-color: #bf5c5c;
+}
+
+.likes button:hover, .likes .dislike:hover {
+    opacity: 0.8;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    max-width: 539px;
+    max-height: 787px;
+}
+
+/* Centralização dos elementos no restoration-container e image-container */
+.restoration-container, .image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 20px auto;
+}
+
+/* Botão Denunciar com tamanho e estilo ajustados */
+.denunciar-btn {
+    background-color: #bf5c5c;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    font-size: 14px;
+    border-radius: 4px;
+    margin-top: 15px;
+    cursor: pointer;
+    width: auto; /* Ajuste para não ser a tela inteira */
+}
+
+.denunciar-btn:hover {
+    background-color: #800b0b;
+}
+
+@media (min-width: 769px) {
+    .likes {
+        justify-content: flex-start; /* Alinha os botões de like à esquerda no desktop */
+    }
+}

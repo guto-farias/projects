@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jorge da Borracharia</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../styles/header.css">
+    <link rel="stylesheet" href="../styles/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha384-jLKHWMzi00V8fIG+9gT28QXZ7bPcf+cpP2e1ZJqT+8Zae/lyIoVpg5U/4A8R/uh5" crossorigin="anonymous">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a class="navbar-brand" href="../landing page/index.html">
+                <img src="../imgs/Logo.PNG" alt="Logo" style="height: 40px;">
+            </a>
+            <div class="navbar-collapse">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a href="../landing page/index.html">Início</a></li>
+                    <li class="nav-item"><a href="../tabelaLicitacoes/index.html">Licitações</a></li>
+                    <li class="nav-item"><a href="../tabelaPrestadores/index.html">Prestadores</a></li>
+                    <li class="nav-item"><a href="../tabelaDenuncias/index.html">Denúncias</a></li>
+                </ul>
+                <div class="navbar-buttons">
+                    <button class="btn-white"><a href="../login/index.html" class="white">Login</a></button>
+                    <button class="btn-green"><a href="../cadastro/index.html" class="green">Registrar</a></button>
+                </div>
+            </div>
+            <button class="navbar-toggle" onclick="toggleNavbar()">
+                <span class="toggle-icon">&#9776;</span>
+            </button>
+        </nav>
+    </header>
+    <script src="../scripts/header.js"></script>
+
+    <h1 style="text-align: center;" > Jorge da Borracharia</h1>
+
+    <div class="content">
+        <img src="../imgs/4148174_x216.jpg" alt="Jorge Da Borracharia">
+        <p><span class="bold">Fundada em 08 de julho de 2006</span>, na cidade de Videira, a borracharia Jorge Da Borracharia atua no endereço Rua XX de Janeiro nº 1478, no bairro central, conta com 17 funcionários e presta serviços de borracharia em geral.</p>
+        
+    </div>
+
+    <h2>LICITAÇÕES JORGE DA BORRACHARIA</h2>
+    
+
+    <div id="loading" class="loading">
+        <div class="spinner"></div>
+        <p>Carregando...</p>
+    </div>
+
+    <div class="table-container" style="display: block;">
+        <div class="header">
+            <input type="text" id="search" placeholder="Buscar...">
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Nome</th>
+                    <th>Empresa</th>
+                    <th>Status</th>
+                    <th>Data</th>
+                    <th>Acessar</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td data-label="#">1</td>
+                    <td data-label="Nome">Recapacitação 0008/2024</td>
+                    <td data-label="Empresa">Jorge Da Borracharia</td>
+                    <td data-label="Status"><span class="status andamento">ANDAMENTO</span></td>
+                    <td data-label="Data">19/04/2024</td>
+                    <td data-label="Acessar"><button class="action-btn">Abrir licitação</button></td>
+                </tr>
+                <tr>
+                    <td data-label="#">2</td>
+                    <td data-label="Nome">Recapacitação 0012/2024</td>
+                    <td data-label="Empresa">Jorge Da Borracharia</td>
+                    <td data-label="Status"><span class="status aberto">ABERTO</span></td>
+                    <td data-label="Data">23/04/2024</td>
+                    <td data-label="Acessar"><button class="action-btn">Abrir licitação</button></td>
+                </tr>
+                <tr>
+                    <td data-label="#">3</td>
+                    <td data-label="Nome">Recapacitação 0019/2022</td>
+                    <td data-label="Empresa">Jorge Da Borracharia</td>
+                    <td data-label="Status"><span class="status andamento">ANDAMENTO</span></td>
+                    <td data-label="Data">17/02/2022</td>
+                    <td data-label="Acessar"><button class="action-btn">Abrir licitação</button></td>
+                </tr>
+                <tr>
+                    <td data-label="#">4</td>
+                    <td data-label="Nome">Recapacitação 0017/2022</td>
+                    <td data-label="Empresa">Jorge Da Borracharia</td>
+                    <td data-label="Status"><span class="status embargado">EMBARGADO</span></td>
+                    <td data-label="Data">10/08/2022</td>
+                    <td data-label="Acessar"><button class="action-btn">Abrir licitação</button></td>
+                </tr>
+                <tr>
+                    <td data-label="#">5</td>
+                    <td data-label="Nome">Recapacitação 0011/2023</td>
+                    <td data-label="Empresa">Jorge Da Borracharia</td>
+                    <td data-label="Status"><span class="status andamento">ANDAMENTO</span></td>
+                    <td data-label="Data">11/06/2023</td>
+                    <td data-label="Acessar"><button class="action-btn">Abrir licitação</button></td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="footer">
+            <span>5 de 5</span>
+            <div class="pagination">
+                <button class="page-btn">❮</button>
+                <span>Página 1</span>
+                <button class="page-btn">❯</button>
+            </div>
+        </div>
+    </div>
+    
+    
+    <script src="script.js"></script>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <img src="../imgs/logo-dark.png" alt="Vidreira Transparente Logo" class="footer-logo">
+            <p class="copyright-text">Copyright &copy; 2024 Videira Transparente Ltda. - Todos os direitos reservados.</p>
+            <img src="../imgs/social-icons.png" alt="Social Media Icons" class="social-media-icons">
+        </div>
+    </footer>
+
+</body>
+</html>

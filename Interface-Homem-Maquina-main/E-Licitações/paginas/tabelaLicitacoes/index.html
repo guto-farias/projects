@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela de Licitações</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha384-jLKHWMzi00V8fIG+9gT28QXZ7bPcf+cpP2e1ZJqT+8Zae/lyIoVpg5U/4A8R/uh5" crossorigin="anonymous">
+    <link rel="stylesheet" href="../styles/header.css">
+    <link rel="stylesheet" href="../styles/footer.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a class="navbar-brand" href="../landing page/index.html">
+                <img src="../imgs/Logo.PNG" alt="Logo" style="height: 40px;">
+            </a>
+            <div class="navbar-collapse">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a href="../landing page/index.html">Início</a></li>
+                    <li class="nav-item"><a href="index.html">Licitações</a></li>
+                    <li class="nav-item"><a href="../tabelaPrestadores/index.html">Prestadores</a></li>
+                    <li class="nav-item"><a href="../tabelaDenuncias/index.html">Denúncias</a></li>
+                </ul>
+                <div class="navbar-buttons">
+                    <button class="btn-white"><a href="../login/index.html" class="white">Login</a></button>
+                    <button class="btn-green"><a href="../cadastro/index.html" class="green">Registrar</a></button>
+                </div>
+            </div>
+            <button class="navbar-toggle" onclick="toggleNavbar()">
+                <span class="toggle-icon">&#9776;</span>
+            </button>
+        </nav>
+    </header>
+    <script src="../scripts/header.js"></script>
+
+    <h1 style="text-align: center;" >Licitações</h1>
+    <div id="loading" class="loading">
+        <div class="spinner"></div>
+        <p>Carregando...</p>
+    </div>
+
+    <div class="table-container" style="display: none;">
+        <div class="header">
+            <input type="text" id="search" placeholder="Buscar...">
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Nome</th>
+                    <th>Empresa</th>
+                    <th>Data</th>
+                    <th>Status</th>
+                    <th>Acessar</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td data-label="#">1</td>
+                    <td data-label="Nome" class="tooltip">Reforma Rua Arindo Peixoto</td>
+                    <td data-label="Empresa">Odebrecht</td>
+                    <td data-label="Data">19/04/2024</td>
+                    <td data-label="Status"><span class="status andamento">ANDAMENTO</span></td>
+                    <td data-label="Acessar"><button class="action-btn">Abrir licitação</button></td>
+                </tr>
+                <tr>
+                    <td data-label="#">2</td>
+                    <td data-label="Nome" class="tooltip">Restauração Veículo tenebroso</td>
+                    <td data-label="Empresa">Jorge da Borracharia</td>
+                    <td data-label="Data">23/05/2024</td>
+                    <td data-label="Status"><span class="status aberto">ABERTO</span></td>
+                    <td data-label="Acessar"><button class="action-btn">Abrir licitação</button></td>
+                </tr>
+                <tr>
+                    <td data-label="#">3</td>
+                    <td data-label="Nome" class="tooltip">Pavimentação Avenida Correria Pinto</td>
+                    <td data-label="Empresa">ConstruAdaptta Ltda.</td>
+                    <td data-label="Data">31/07/2024</td>
+                    <td data-label="Status"><span class="status andamento">ANDAMENTO</span></td>
+                    <td data-label="Acessar"><button class="action-btn">Abrir licitação</button></td>
+                </tr>
+                <tr>
+                    <td data-label="#">4</td>
+                    <td data-label="Nome" class="tooltip">Construção Avenida Vitor Farias</td>
+                    <td data-label="Empresa">Ecoleate Engenharia Ltda.</td>
+                    <td data-label="Data">16/10/2023</td>
+                    <td data-label="Status"><span class="status andamento">ANDAMENTO</span></td>
+                    <td data-label="Acessar"><button class="action-btn">Abrir licitação</button></td>
+                </tr>
+                <tr>
+                    <td data-label="#">5</td>
+                    <td data-label="Nome" class="tooltip">Limpeza das Vidraças</td>
+                    <td data-label="Empresa">Pioneer Limpeza Acessível Ltda.</td>
+                    <td data-label="Data">12/06/2023</td>
+                    <td data-label="Status"><span class="status andamento">ANDAMENTO</span></td>
+                    <td data-label="Acessar"><button class="action-btn">Abrir licitação</button></td>
+                </tr>
+                <tr>
+                    <td data-label="#">6</td>
+                    <td data-label="Nome" class="tooltip">Compra de Materia prima dos primos</td>
+                    <td data-label="Empresa">A definir...</td>
+                    <td data-label="Data">29/04/2024</td>
+                    <td data-label="Status"><span class="status aberto">ABERTO</span></td>
+                    <td data-label="Acessar"><button class="action-btn">Abrir licitação</button></td>
+                </tr>
+                <tr>
+                    <td data-label="#">7</td>
+                    <td data-label="Nome" class="tooltip">Demolição Prédio Guarita IFC</td>
+                    <td data-label="Empresa">Trinca Tudo Engenharia Ltda.</td>
+                    <td data-label="Data">05/01/2018</td>
+                    <td data-label="Status"><span class="status finalizado">FINALIZADO</span></td>
+                    <td data-label="Acessar"><button class="action-btn">Abrir licitação</button></td>
+                </tr>
+                <tr>
+                    <td data-label="#">8</td>
+                    <td data-label="Nome" class="">Opa Tape Buraco</td>
+                    <td data-label="Empresa">Videira Obras e Projetos Ltda.</td>
+                    <td data-label="Data">31/05/2019</td>
+                    <td data-label="Status"><span class="status andamento">ANDAMENTO</span></td>
+                    <td data-label="Acessar"><button class="action-btn">Abrir licitação</button></td>
+                </tr>
+                <tr>
+                    <td data-label="#">9</td>
+                    <td data-label="Nome" class="tooltip">Pintura da Praça nereus ramos</td>
+                    <td data-label="Empresa">Liberty Construtora Ltda.</td>
+                    <td data-label="Data">11/07/2019</td>
+                    <td data-label="Status"><span class="status embargado">EMBARGADO</span></td>
+                    <td data-label="Acessar"><button class="action-btn">Abrir licitação</button></td>
+                </tr>
+                <tr>
+                    <td data-label="#">10</td>
+                    <td data-label="Nome" class="tooltip">Construção da Garagem militar</td>
+                    <td data-label="Empresa">Cai Mas Não Quebra Obras Ltda.</td>
+                    <td data-label="Data">14/02/2019</td>
+                    <td data-label="Status"><span class="status andamento">ANDAMENTO</span></td>
+                    <td data-label="Acessar"><button class="action-btn">Abrir licitação</button></td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="footer">
+            <span>1-10 de 97</span>
+            <div class="pagination">
+                <button class="page-btn">❮</button>
+                <span>Página 1 de 10</span>
+                <button class="page-btn">❯</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+
+    <footer class="footer-capeta">
+        <div class="footer-content">
+            <img src="../imgs/logo-dark.png" alt="Vidreira Transparente Logo" class="footer-logo">
+            <p class="copyright-text">Copyright &copy; 2024 Videira Transparente Ltda. - Todos os direitos reservados.</p>
+            <img src="../imgs/social-icons.png" alt="Social Media Icons" class="social-media-icons">
+        </div>
+    </footer>
+</body>
+</html>

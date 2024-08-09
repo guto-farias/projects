@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualizar Denúncia</title>
+    <link rel="stylesheet" href="styles/sdenuncia-styles.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/footer.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a class="navbar-brand" href="index.html">
+                <img src="imgs/Logo.PNG" alt="Logo" style="height: 40px;">
+            </a>
+            <div class="navbar-collapse">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a href="index.html">Início</a></li>
+                    <li class="nav-item"><a href="tabela/index.html">Licitações</a></li>
+                    <li class="nav-item"><a href="tabelaPrestadores/index.html">Prestadores</a></li>
+                    <li class="nav-item"><a href="tabelaDenuncia/index.html">Denúncias</a></li>
+                </ul>
+                <div class="navbar-buttons">
+                    <button class="btn-white"><a href="login.html" class="white">Login</a></button>
+                    <button class="btn-green"><a href="registrar.html" class="green">Registrar</a></button>
+                </div>
+            </div>
+            <button class="navbar-toggle" onclick="toggleNavbar()">
+                <span class="toggle-icon">&#9776;</span>
+            </button>
+        </nav>
+    </header>
+    <script src="scripts/header.js"></script>
+
+    <div class="container">
+        <div class="form-container">
+            <h1>Visualizar Denúncia</h1>
+            <div class="input-group">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" value="Restauração veícular | 0012/2024." readonly>
+            </div>
+
+            <div class="row">
+                <div class="input-group-half">
+                    <label for="motivo">Motivo:</label>
+                    <input type="text" id="motivo" name="motivo" value="Possível fraude." readonly>
+                </div>
+
+                <div class="input-group-half">
+                    <label for="data">Data:</label>
+                    <input type="text" id="data" name="data" value="23/05/2022" readonly>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label for="descricao">Descrição:</label>
+                <textarea id="descricao" name="descricao" readonly>Indicações de que as empresas concorrentes foram previamente informadas sobre os detalhes da licitação, dando a elas uma vantagem injusta. Evidências de que a empresa vencedora da licitação não possui a capacidade técnica ou financeira para realizar a restauração veicular conforme especificado no contrato.</textarea>
+            </div>
+
+            <div class="input-group">
+                <a href="https://example.com/path/to/your/document.pdf" target="_blank">Baixe o anexo aqui</a>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer-content">
+            <img src="imgs/logo-dark.png" alt="Vidreira Transparente Logo" class="footer-logo">
+            <p class="copyright-text">Copyright &copy; 2024 Videira Transparente Ltda. - Todos os direitos reservados.</p>
+            <img src="imgs/social-icons.png" alt="Social Media Icons" class="social-media-icons">
+        </div>
+    </footer>
+</body>
+</html>

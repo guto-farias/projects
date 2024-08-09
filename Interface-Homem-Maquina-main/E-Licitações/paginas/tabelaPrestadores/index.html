@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela de Prestadores</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha384-jLKHWMzi00V8fIG+9gT28QXZ7bPcf+cpP2e1ZJqT+8Zae/lyIoVpg5U/4A8R/uh5" crossorigin="anonymous">
+    <link rel="stylesheet" href="../styles/header.css">
+    <link rel="stylesheet" href="../styles/footer.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a class="navbar-brand" href="../landing page/index.html">
+                <img src="../imgs/Logo.PNG" alt="Logo" style="height: 40px;">
+            </a>
+            <div class="navbar-collapse">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a href="../landing page/index.html">Início</a></li>
+                    <li class="nav-item"><a href="../tabelaLicitacoes/index.html">Licitações</a></li>
+                    <li class="nav-item"><a href="index.html">Prestadores</a></li>
+                    <li class="nav-item"><a href="../tabelaDenuncias/index.html">Denúncias</a></li>
+                </ul>
+                <div class="navbar-buttons">
+                    <button class="btn-white"><a href="../login/index.html" class="white">Login</a></button>
+                    <button class="btn-green"><a href="../cadastro/index.html" class="green">Registrar</a></button>
+                </div>
+            </div>
+            <button class="navbar-toggle" onclick="toggleNavbar()">
+                <span class="toggle-icon">&#9776;</span>
+            </button>
+        </nav>
+    </header>
+    <script src="../scripts/header.js"></script>
+
+    <h1 style="text-align: center;" >Prestadores</h1>
+    <div id="loading" class="loading">
+        <div class="spinner"></div>
+        <p>Carregando...</p>
+    </div>
+
+    <div class="table-container" style="display: block;">
+        <div class="header">
+            <input type="text" id="search" placeholder="Buscar...">
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Empresa</th>
+                    <th>Nº Licitações</th>
+                    <th>Data de Adesão</th>
+                    <th>Sobre</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td data-label="#">1</td>
+                    <td data-label="Empresa">Odebrecht</td>
+                    <td data-label="Nº Licitações">04</td>
+                    <td data-label="Data de Adesão">19/04/2024</td>
+                    <td data-label="Sobre"><button class="action-btn">Saiba mais!</button></td>
+                </tr>
+                <tr>
+                    <td data-label="#">2</td>
+                    <td data-label="Empresa">ConstruAdapta Ltda.</td>
+                    <td data-label="Nº Licitações">12</td>
+                    <td data-label="Data de Adesão">23/04/2024</td>
+                    <td data-label="Sobre"><button class="action-btn">Saiba mais!</button></td>
+                </tr>
+                <tr>
+                    <td data-label="#">3</td>
+                    <td data-label="Empresa">EcoSkate Engenharia Ltda.</td>
+                    <td data-label="Nº Licitações">01</td>
+                    <td data-label="Data de Adesão">17/02/2022</td>
+                    <td data-label="Sobre"><button class="action-btn">Saiba mais!</button></td>
+                </tr>
+                <tr>
+                    <td data-label="#">4</td>
+                    <td data-label="Empresa">Pioneira Limpeza Acessível Ltda.</td>
+                    <td data-label="Nº Licitações">12</td>
+                    <td data-label="Data de Adesão">10/08/2022</td>
+                    <td data-label="Sobre"><button class="action-btn">Saiba mais!</button></td>
+                </tr>
+                <tr>
+                    <td data-label="#">5</td>
+                    <td data-label="Empresa">Trinca Tudo Engenharia Ltda.</td>
+                    <td data-label="Nº Licitações">08</td>
+                    <td data-label="Data de Adesão">11/06/2023</td>
+                    <td data-label="Sobre"><button class="action-btn">Saiba mais!</button></td>
+                </tr>
+                <tr>
+                    <td data-label="#">6</td>
+                    <td data-label="Empresa">Appi Materiais para Construção</td>
+                    <td data-label="Nº Licitações">07</td>
+                    <td data-label="Data de Adesão">29/04/2024</td>
+                    <td data-label="Sobre"><button class="action-btn">Saiba mais!</button></td>
+                </tr>
+                <tr>
+                    <td data-label="#">7</td>
+                    <td data-label="Empresa">VeroNet Telecomunicações</td>
+                    <td data-label="Nº Licitações">04</td>
+                    <td data-label="Data de Adesão">05/01/2018</td>
+                    <td data-label="Sobre"><button class="action-btn">Saiba mais!</button></td>
+                </tr>
+                <tr>
+                    <td data-label="#">8</td>
+                    <td data-label="Empresa">Pepe Software</td>
+                    <td data-label="Nº Licitações">01</td>
+                    <td data-label="Data de Adesão">09/09/2020</td>
+                    <td data-label="Sobre"><button class="action-btn">Saiba mais!</button></td>
+                </tr>
+                <tr>
+                    <td data-label="#">9</td>
+                    <td data-label="Empresa">Espalha Cimento Ltda.</td>
+                    <td data-label="Nº Licitações">14</td>
+                    <td data-label="Data de Adesão">06/11/2023</td>
+                    <td data-label="Sobre"><button class="action-btn">Saiba mais!</button></td>
+                </tr>
+                <tr>
+                    <td data-label="#">10</td>
+                    <td data-label="Empresa">Jorge Da Borracharia</td>
+                    <td data-label="Nº Licitações">05</td>
+                    <td data-label="Data de Adesão">17/09/2019</td>
+                    <td data-label="Sobre"><button class="action-btn">Saiba mais!</button></td>
+                </tr>
+                <tr>
+                    <td data-label="#">11</td>
+                    <td data-label="Empresa">Liberty Construtora Ltda.</td>
+                    <td data-label="Nº Licitações">17</td>
+                    <td data-label="Data de Adesão">14/02/2024</td>
+                    <td data-label="Sobre"><button class="action-btn">Saiba mais!</button></td>
+                </tr>
+                <tr>
+                    <td data-label="#">12</td>
+                    <td data-label="Empresa">Cai Mas Não Quebra Obras Ltda.</td>
+                    <td data-label="Nº Licitações">11</td>
+                    <td data-label="Data de Adesão">07/07/2022</td>
+                    <td data-label="Sobre"><button class="action-btn">Saiba mais!</button></td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="footer">
+            <span>1-12 de 23</span>
+            <div class="pagination">
+                <button class="page-btn">❮</button>
+                <span>Página 1 de 2</span>
+                <button class="page-btn">❯</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+
+    <footer class="footer-capeta">
+        <div class="footer-content">
+            <img src="../imgs/logo-dark.png" alt="Vidreira Transparente Logo" class="footer-logo">
+            <p class="copyright-text">Copyright &copy; 2024 Videira Transparente Ltda. - Todos os direitos reservados.</p>
+            <img src="../imgs/social-icons.png" alt="Social Media Icons" class="social-media-icons">
+        </div>
+    </footer>
+</body>
+</html>

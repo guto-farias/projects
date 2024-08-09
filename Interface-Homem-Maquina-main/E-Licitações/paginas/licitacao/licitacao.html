@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Licitação</title>
+    <link rel="stylesheet" href="styles/licitacao.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/footer.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a class="navbar-brand" href="index.html">
+                <img src="imgs/Logo.PNG" alt="Logo" style="height: 40px;">
+            </a>
+            <div class="navbar-collapse">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a href="index.html">Início</a></li>
+                    <li class="nav-item"><a href="tabela/index.html">Licitações</a></li>
+                    <li class="nav-item"><a href="tabelaPrestadores/index.html">Prestadores</a></li>
+                    <li class="nav-item"><a href="tabelaDenuncia/index.html">Denúncias</a></li>
+                </ul>
+                <div class="navbar-buttons">
+                    <button class="btn-white"><a href="login.html" class="white">Login</a></button>
+                    <button class="btn-green"><a href="registrar.html" class="green">Registrar</a></button>
+                </div>
+            </div>
+            <button class="navbar-toggle" onclick="toggleNavbar()">
+                <span class="toggle-icon">&#9776;</span>
+            </button>
+        </nav>
+    </header>
+    <script src="scripts/header.js"></script>
+
+    <div class="restoration-container">
+        <h1>Restauração Veicular</h1>
+        <p class="project-number">Nº 0012/2024</p>
+        <div class="status">
+            <label>Status:</label>
+            <button class="status-button">EM ANDAMENTO</button>
+        </div>
+    </div>
+
+    <div class="image-container">
+        <img src="imgs/licitacao.jpg" alt="licitação exemplo" style="width: 539px; height: 787px;">
+        <button class="denunciar-btn">DENUNCIAR</button>
+    </div>
+
+    <div class="comments-container">
+        <h2>Comentários</h2>
+        <br>
+        <div class="comment">
+            <div class="likes">
+                <button class="like">+</button>
+                <span>12</span>
+                <button class="dislike">-</button>
+            </div>
+            <div class="comment-content">
+                <div class="comment-header">
+                    <strong>marcelotop1</strong>
+                    <div>
+                        <button class="reply">Responder</button>
+                        <button class="edit">Editar</button>
+                        <button class="delete">Deletar</button>
+                    </div>
+                </div>
+                <p>Como é estabelecido o orçamento para a reforma dos carros durante o processo de licitação?</p>
+                <div class="response-box">
+                    <div class="response">
+                        <br>
+                        <strong>vitorino</strong>
+                        <p>O orçamento é estabelecido com base na estimativa de custos para a realização dos serviços, levando em consideração o escopo do trabalho, a quantidade de veículos a serem reformados e outros fatores relevantes. É definido pela instituição ou empresa contratante.</p>
+                        <br>
+                        <button class="reply">Responder</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="comment">
+            <div class="likes">
+                <button class="like">+</button>
+                <span>19</span>
+                <button class="dislike">-</button>
+            </div>
+            <div class="comment-content">
+                <div class="comment-header">
+                    <strong>crispin-tim</strong>
+                    <div>
+                        <button class="reply">Responder</button>
+                        <button class="edit">Editar</button>
+                        <button class="delete">Deletar</button>
+                    </div>
+                </div>
+                <p>Só quer mamão só quer mel? Acha que é fácil fazer papel?</p>
+                <div class="response-box">
+                    <div class="response">
+                        <br>
+                        <strong>tcho-que-responde</strong>
+                        <p>O orçamento é estabelecido com base na estimativa de grêmio.</p>
+                        <br>
+                        <button class="reply">Responder</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="comment">
+            <div class="likes">
+                <button class="like">+</button>
+                <span>74</span>
+                <button class="dislike">-</button>
+            </div>
+            <div class="comment-content">
+                <div class="comment-header">
+                    <strong>Chiquito</strong>
+                    <div>
+                        <button class="reply">Responder</button>
+                        <button class="edit">Editar</button>
+                        <button class="delete">Deletar</button>
+                    </div>
+                </div>
+                <p>Quem responder é feliz kkk</p>
+            </div>
+        </div>
+
+        <div class="comment">
+            <div class="likes">
+                <button class="like">+</button>
+                <span>3</span>
+                <button class="dislike">-</button>
+            </div>
+            <div class="comment-content">
+                <div class="comment-header">
+                    <strong>billie_eilish</strong>
+                    <div>
+                        <button class="reply">Responder</button>
+                        <button class="edit">Editar</button>
+                        <button class="delete">Deletar</button>
+                    </div>
+                </div>
+                <p>uga buga uga buga?</p>
+                <div class="response-box">
+                    <div class="response">
+                        <br>
+                        <strong>eu_aprovo</strong>
+                        <p>aprovado.</p>
+                        <br>
+                        <button class="reply">Responder</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Additional comments can follow the same structure -->
+
+        <div class="comment-input">
+            <textarea placeholder="Adicione um comentário..."></textarea>
+            <button class="send">ENVIAR!</button>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <img src="imgs/logo-dark.png" alt="Vidreira Transparente Logo" class="footer-logo">
+            <p class="copyright-text">Copyright &copy; 2024 Videira Transparente Ltda. - Todos os direitos reservados.</p>
+            <img src="imgs/social-icons.png" alt="Social Media Icons" class="social-media-icons">
+        </div>
+    </footer>
+    <script src="scripts/carregar-footer.js"></script>
+</body>
+</html>

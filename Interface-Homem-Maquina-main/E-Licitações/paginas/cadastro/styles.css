@@ -1,0 +1,165 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+/* Estilos específicos para a container principal */
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    width: 800px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.login-section, .signup-section {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-section {
+    width: 35%;
+    background-color: #4CAF50;
+    color: white;
+}
+
+.login-content {
+    text-align: center;
+}
+
+.signup-section {
+    width: 65%;
+    background-color: white;
+    color: #333;
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 1.5em;
+}
+
+.signup-title {
+    color: #4CAF50;
+}
+
+.signup-subtitle {
+    margin-bottom: 20px;
+    font-size: 0.9em;
+    color: #999;
+    text-align: center;
+}
+
+.login-subtitle {
+    font-size: 0.9em;
+}
+
+p {
+    margin-bottom: 20px;
+    font-size: 1em;
+    text-align: center;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f7f7f7;
+}
+
+.btn, .btn-outline {
+    display: inline-block;
+    padding: 10px 20px;
+    text-align: center;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 200px;
+}
+
+.btn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.btn:hover {
+    background-color: #45a049;
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.btn-outline:hover {
+    background-color: white;
+    color: #4CAF50;
+}
+
+.btn-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.forgot-password {
+    display: block;
+    margin-top: 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 0.8em;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+/* Notification */
+.notification {
+    display: none;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 300px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    z-index: 1000;
+}
+
+.notification-content {
+    text-align: left;
+}
+
+.notification-title {
+    color: #4CAF50;
+    font-weight: bold;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+}
